@@ -1005,6 +1005,10 @@ roll__list--title {
     line-height: 30px;
 }
 
+.product {
+    margin-bottom: 80px;
+}
+
 .product__container--ice {
     display: grid;
     grid-template-columns: repeat(4, 270px);
@@ -1116,6 +1120,7 @@ roll__list--title {
     width: 1170px;
     padding: 24px;
     box-sizing: border-box;
+    margin-bottom: 80px;
 }
 
 .description__container {
@@ -1135,11 +1140,15 @@ roll__list--title {
 .description__details {
     display: flex;
     flex-wrap: wrap;
-    gap: 40px 30px;
 }
 
 .description__text {
+    display: flex;
     width: 505px;
+}
+
+.description__specialty {
+    width: 442px;
 }
 
 .description__text:last-child:nth-child(odd) {
