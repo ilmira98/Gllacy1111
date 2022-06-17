@@ -137,13 +137,14 @@
               <li class="breadcrumbs__item">
                 <a class="breadcrumbs__link breadcrumbs__link--current" href="catalog.html">Каталог</a>
               </li>
-              <li class="breadcrumbs__item">Сливочное
+              <li class="breadcrumbs__item breadcrumbs__item--creamy">Сливочное
               </li>
             </ul>
-            <h1 class="page__container--title container__title container__title--creamy">Сливочное мороженое</h1>
+            <h2 class="page__container--title container__title container__title--creamy">Сливочное мороженое</h1>
           </section>
           <section class="sort container__content">
-              <div class="catalog__sort">
+            <div class="sort__container">
+              <div class="catalog__products--filter">
                 <h2 class="visually-hidden">Сортировка товаров.</h2>
                 <div class="catalog__sort--list">
                   <fieldset class="catalog__sort--field">
@@ -153,40 +154,26 @@
                     </select>
                   </fieldset>               
                 </div>
-              </div>
-              <div class="catalog__products--filter">
                   <fieldset class="catalog__filter--group catalog__filter--range">
-                      <legend class="catalog__filter--title">Цена: 100 ₽ – 500 ₽</legend>
-                      <div class="range">
-                        <div class="range-scale">
-                            <div class="range-bar" style="width: 119px">
-                                <button class="range-toggle toggle-min" type="button">
-                                  <span class="visually-hidden">Изменение минимальной цены.</span>
-                                  <span class="range-toggle__decor"></span>
-                                </button>
-                                <button class="range-toggle toggle-max" type="button">
-                                  <span class="visually-hidden">Изменение максимальной цены.</span>
-                                  <span class="range-toggle__decor range-toggle__decor--max"></span>
-                                </button>
-                            </div>
-                        </div>
+                  <legend class="catalog__filter--title">Цена: 100 ₽ – 500 ₽</legend>
+                  <div class="range">
+                    <div class="range-scale">
+                      <div class="range-bar" style="width: 119px">
+                        <button class="range-toggle toggle-min">
+                          <span class="visually-hidden">Изменение минимальной цены.</span>
+                        </button>
+                        <button class="range-toggle toggle-max">
+                          <span class="visually-hidden">Изменение максимальной цены.</span>
+                        </button>
                       </div>
-                      <div class="range__wrapper--inputs">
-                        <div class="range__wrapper--counts">
-                           <label class="range__wrapper--label range__wrapper--min">от</label>
-                           <input class="range__wrapper--input" type="text" value="100" name="min-price">
-                        </div>
-                        <div class="range__wrapper--counts">
-                           <label class="range__wrapper--label range__wrapper--max">до</label>
-                           <input class="range__wrapper--input" type="text" value="500" name="max-price">
-                        </div>
-                      </div>
+                    </div>
+                  </div>
                   </fieldset> 
                   <fieldset class="catalog__filter--group">
                       <legend class="catalog__filter--title">Жирность:</legend>
                       <ul class="catalog__filter--list list">
                         <li class="catalog__filter--item catalog__filter--radio">
-                          <label class="control">
+                          <label class="control control--first">
                             <input class="visually-hidden control__input" type="radio" name="thereis" value="bluetooth">
                             <span class="control__mark"></span>
                             <span class="control__label">0%</span>
@@ -257,6 +244,7 @@
                     </fieldset>
                     <button class="button catalog__filter--button" type="submit">Применить</button>
               </div>
+            </div>
           </section>
           <section class="product container__content">
               <h2 class="visually-hidden">Список товаров</h2>

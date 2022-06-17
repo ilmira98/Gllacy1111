@@ -1219,8 +1219,9 @@ roll__list--title {
 
 .delivery__text--container {
     width: 371px;
-    padding-top: 103px;
+    padding-top: 167px;
     padding-left: 36px;
+    margin-left: 64px;
 }
 
 .delivery__text {
@@ -1243,6 +1244,7 @@ roll__list--title {
     background: #FCFCFC;
     box-shadow: 0px 15px 40px rgba(45, 52, 64, 0.12);
     border-radius: 8px;
+    margin: 64px 64px 64px 135px;
 }
 
 .delivery__title {
@@ -1277,6 +1279,7 @@ roll__list--title {
     background: #FCFCFC;
     box-shadow: 0px 8px 16px rgba(45, 52, 64, 0.12);
     border-radius: 8px;
+    margin: 64px 768px 64px 64px;
 }
 
 .contact__text {
@@ -1361,17 +1364,25 @@ roll__list--title {
 
 .news__card {
     background: url("images/news/background.png") repeat #FFFFFF;
+    margin-left: 98px;
 }
 
 .subscription__card {
     background: url("images/email/mail_background.png") repeat #FFFFFF;
+    margin-right: 98px;
+}
+
+.container__row {
+    margin-bottom: 76px;
 }
 
 .container__card--info {
     display: flex;
-    column-gap: 135px;
-    padding: 64px;
     box-sizing: border-box;
+}
+
+.delivery__card {
+    margin-bottom: 80px;
 }
 
 .banner__title--card {
@@ -1386,13 +1397,25 @@ roll__list--title {
 }
 
 .footer {
+    padding-top: 48px;
+}
+
+.footer__container {
     display: flex;
     justify-content: space-between;
-    padding-top: 48px;
 }
 
 .footer--line {
     border-top: 1px solid rgba(252, 252, 252, 0.3);
+}
+
+.footer__social--list {
+    display: flex;
+    flex-direction: row;
+}
+
+.footer__social--item:not(:last-child) {
+    padding-right: 16px;
 }
 
 .footer__list {
@@ -1450,9 +1473,11 @@ roll__list--title {
     background: rgba(252, 252, 252, 0.3);
     border: 2px solid #FCFCFC;
     border-radius: 20px;;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
     font-weight: 700;
+    font-size: 14px;
     line-height: 20px;
-    text-align: center;
     cursor: pointer;
 }
 
@@ -1475,7 +1500,6 @@ roll__list--title {
     background: rgba(252, 252, 252, 0.3);
     opacity: 0.4;
     border: 2px solid #FCFCFC;
-    border-radius: 20px;
 }
 
 .catalof__header {
@@ -1488,15 +1512,28 @@ roll__list--title {
 
 .breadcrumbs {
     display: flex;
-    column-gap: 28px;
     flex-wrap: wrap;
+    flex-direction: column;
     justify-content: flex-start;
-    align-items: center;
     margin-bottom: 16px;
+}
+
+.breadcrumbs__list {
+    text-decoration: none;
+    display: flex;
 }
 
 .breadcrumbs__item {
     position: relative;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.breadcrumbs__item:not(:last-child) {
+    padding-right: 8px;
 }
 
 .breadcrumbs__link {
@@ -1504,6 +1541,7 @@ roll__list--title {
     font-size: 14px;
     line-height: 20px;
     text-decoration: none;
+    color: #2D3440;
 }
 
 .breadcrumbs__link--current {
@@ -1517,8 +1555,19 @@ roll__list--title {
     width: 14px;
     height: 14px;
     position: absolute;
-    top: 7px;
-    left: -20px;
+    top: 5px;
+    left: -9px;
+}
+
+:not(.breadcrumbs__link--current) .breadcrumbs__item--creamy::before {
+    content: "";
+    background-image: url("images/icon/arrow.svg");
+    display: block;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    top: 5px;
+    left: -9px;
 }
 
 .page__container--title {
@@ -1529,7 +1578,6 @@ roll__list--title {
 
 .catalog__sort--list {
     display: flex;
-    column-gap: 24px;
     justify-content: flex-start;
     align-items: flex-start;
 }
@@ -1557,7 +1605,6 @@ roll__list--title {
 
 .catalog__filter--list {
     display: flex;
-    column-gap: 16px;
     background-color: #FFCBD8;
     border-radius: 20px;
     border: none;
@@ -1568,22 +1615,149 @@ roll__list--title {
     line-height: 20px;
 }
 
+.catalog__filter--range {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    width: 196px;
+    margin-right: 24px;
+}
+
+.sort__container {
+    display: flex;
+    width: 807px;
+    flex-wrap: wrap;
+}
+
+.range {
+    padding: 17px 16px;
+    background-color: rgba(252, 252, 252, 0.3);
+    border-radius: 20px;
+}
+
+.range-scale {
+    position: relative;
+    height: 2px;
+    background-color: rgba(86, 92, 102, 0.3);
+    border-radius: 2px;
+} 
+
+.range-bar {
+    position: absolute;
+    height: 2px;
+    background-color: rgba(86, 92, 102, 1);
+}
+
+.range-toggle {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-color: #2D3440;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+
+.range-toggle::after {
+    position: absolute;
+    content: " ";
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: #FCFCFC;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.range-toggle:hover {
+    background-color:#FCFCFC;
+}
+
+.range-toggle:hover::after {
+    background-color: #2D3440;
+}
+
+.range-toggle:active {
+    background-color:#2D3440;
+}
+
+.range-toggle:focus {
+    background-color:#FCFCFC;
+    border: 2px solid #2D3440;
+}
+
+.range-toggle:focus::after {
+    background-color: #2D3440;
+}
+
+.toggle-min {
+    top: -8px;
+    left: -6px;
+}
+
+.toggle-max {
+    top: -8px;
+    right: -10px;
+}
+
+
+.catalog__products--filter {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.catalog__filter--group {
+    border: 0;
+}
+
+.catalog__filter--list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 8px 16px;
+    border-radius: 20px;
+    margin-right: px;
+}
+
+.control {
+    position: relative;
+    display: block;
+}
+
+.control--first {
+    padding-left: 25px;
+}
+
+.control__mark {
+    position: absolute;
+    top: 3px;
+    left: 0;
+    width: 14px;
+    height: 14px;
+    border: 1.5px solid #2D3440;
+    border-radius: 2px;
+    display: block;
+    cursor: pointer;
+}
+
+.control__input[type="radio"] + .control__mark {
+    border-radius: 50%;
+}
+
 .pagination {
-    display: grid;
-    grid-template-columns: 33% 33% 33%;
-    grid-template-areas: ". button list";
-    padding-top: 57px;
-    padding-bottom: 81px;
+    margin-bottom: 81px;
     align-items: center;
 }
 
+.pagination__container {
+    display: flex;
+}
+
 .pagination__button {
-    grid-area: button;
     text-align: center;
 }
 
 .pagination__list {
-    grid-area: list;
     display: flex;
     justify-self: end;
     list-style: none;
