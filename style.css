@@ -417,24 +417,29 @@ roll__list--title {
     left: 18px;
 }
 
-.roll__list--choice {
-    background: #FF4A78;
-}
 
-.roll__list--choice:hover {
+.roll__list--choice,
+.roll__list:hover {
     background: #FFCBD8;
 }
 
-.roll__list--choice:active {
+.roll__list--choice
+.roll__list:active {
     background: #FF7799;
 }
 
-.roll__link--choice {
+.roll__link--choice,
+.roll__list {
     color: #FCFCFC;
 }
 
-.roll__link--choice:hover,:active {
+.roll__link--choice,
+.roll__list:hover,:active {
     color: #2D3440;
+}
+
+.roll__list--choice {
+    background: #FF4A78;
 }
 
 .search__form--conteiner {
